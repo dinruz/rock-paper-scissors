@@ -1,3 +1,6 @@
+
+// test commit for GH activities
+
 // Refs
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
