@@ -1,40 +1,41 @@
+// Refs
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
 
 // Computer choice 
 
 let computerAnswer;
-function getComputerChoice (min,max){
-    
+function getComputerChoice (min,max){    
     const minC= Math.ceil(min);
     const maxF= Math.floor(max);
     computerAnswer = Math.floor(Math.random()*(maxF-minC)+minC);
     return computerAnswer; 
 }
 
-// Human choice 
+// Human Choice
 
-let humanAnswer;
-function getHumanChoice(){
-    const sign=prompt("Choose rock, paper or scissors:");
-    
-    if ((sign.toLowerCase())=="rock"){
-        console.log("You: rock");
-        humanAnswer = 0;
-    }
-    else if ((sign.toLowerCase())=="scissors"){
-        console.log("You: scissors");
-        humanAnswer = 1;
-       
-    }
-    else if((sign.toLowerCase())=="paper"){
-        console.log("You: paper");
-        humanAnswer = 2;
-    }
-    else{
-        console.log( `You: ${sign} - Hey, that's not a sign!`);
-        humanAnswer = 3;
-    }
-return humanAnswer;
-}
+rock.addEventListener('click', ()=> {
+    console.log("You: rock");
+    humanAnswer = 0;
+    computerAnswer = getComputerChoice(0, 3);
+    playRound(humanAnswer,computerAnswer);
+});
+
+scissors.addEventListener('click', ()=> {
+    console.log("You: scissors");
+    humanAnswer=1; 
+    computerAnswer = getComputerChoice(0, 3);
+    playRound(humanAnswer,computerAnswer);
+});
+
+paper.addEventListener('click', ()=> {
+    console.log("You: paper");
+    humanAnswer = 2;
+    computerAnswer = getComputerChoice(0, 3);
+    playRound(humanAnswer,computerAnswer)
+});
+
 
 // play single round 
 
@@ -87,7 +88,7 @@ function playRound (humanChoice,computerChoice){
 
 function playGame(){
     let round;
-    for (round=1; round < 6; round++){
+    /*for (round=1; round < 6; round++){ */ // ukloni ovo do 5 rundi
         console.log("Round: ", round);
         getHumanChoice();
         getComputerChoice(0,3);
@@ -117,5 +118,5 @@ else if (computerScore > humanScore){
 else {
     console.log ("THERE'S NO WINNER! (Ended in a draw.)");
 }
-}
+
 playGame();
