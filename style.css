@@ -1,21 +1,199 @@
-   
+/* Global styles */ 
+
 @font-face {
     font-family:'bitcount';
     src: url('./fonts/BitcountInk.ttf') format('truetype'); 
 }
 
-body {
+* {
+    box-sizing: border-box;
+}
+
+:root{
+--yellow:rgb(238, 205, 21);
+--teal: rgb(7, 82, 82);
+}
+
+body { 
     background-color: rgb(8, 112, 112);
-    font-family: Arial, sans-serif;
-    font-size: 1.5em;
+    font-family: Consolas, 'Lucida Console', monospace;
+    font-size: 1.2em;
     text-align: center;
-    margin: 30px;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ul li::marker{
+    color: var(--yellow);
+
+}
+
+img {
+    transition: transform 0.3s; 
+    height: 120px;
+    width: auto;
+    padding:10px;
+}
+
+
+h1, h2{
+    text-align: center;
+    font-family: 'bitcount',sans-serif;
 }
 
 h1{
-    text-align: center;
-    font-family: 'bitcount',sans-serif;
-    font-size: 3em;
+    flex:1;
+    font-size: 2.2em;
 }
 
+h2{
+    font-size:1.9em;
+}
 
+h3{
+    color: var(--yellow);
+    font-size: 1em;
+}
+
+/* Sections */
+
+.wrap{
+    margin:20px;
+    display:flex;
+}
+
+#title{
+    padding: 10px;
+    background-color: var(--teal);
+}
+
+.highlight {
+    animation: pop 0.3s ease-out forwards; 
+    border: 1.5px solid var(--teal);   
+    border-radius: 10%;
+    transform: scale(1.3); 
+}
+
+#rules{
+    flex:1;
+    text-align: left;
+    background-color: teal;
+    border:3px dotted var(--teal);
+    border-radius: 5%;
+    font-size: 0.9em;
+    padding: 15px;
+    margin: 10px;
+    max-width: 30%;
+}
+
+#choices{
+    flex:1;
+    display: flex;
+    padding:10px;
+    margin: 5px;
+    min-width: 40%;
+}
+
+#yourChoice,
+#pcChoice {
+    flex:1;
+    border:5px dotted var(--yellow);
+    background-color: teal;
+    border-radius: 3%;
+    padding: 20px;
+    margin: 10px;
+}
+
+#yourChoice img,
+#pcChoice img{
+    padding:15px;
+}
+
+#main{
+    display:flex;
+    flex:1;
+    flex-direction: column;
+}
+
+#result{
+    flex:1;
+    text-align: center;
+}
+
+#results{
+    display:flex;
+    flex:1;
+    text-align: left;
+    color: var(--yellow);
+    background-color: rgb(0, 0, 0);
+    border:3px dotted var(--teal);
+    border-radius: 5%;
+    font-size: 20px;
+    font-family: "Bradley Hand", "Comic Sans MS", cursive;
+    color:antiquewhite;
+    padding: 20px;
+    margin: 10px;
+    border:2px solid green;
+}
+
+table {
+    border-collapse: collapse;
+    width: auto; 
+    margin:40px;
+}
+
+th, td {
+    padding: 8px 15px;
+    
+}
+
+th {
+    text-align: left; 
+    border-right: 1px solid #ccc; 
+    border-bottom: 1px solid #ccc; 
+}
+
+td {
+    border-bottom: 1px solid #ccc; 
+    text-align: right;
+}
+
+tr:last-child th, tr:last-child td {
+    border-bottom: none;
+}
+
+#win{
+    flex:1;
+    text-align: center;
+}
+
+#winner-card{
+    border:0.5px dotted var(--yellow);
+    border-radius: 20%;
+    background-color: var(--teal);
+    padding: 60px;
+    margin: 140px 0;
+}
+
+#winner{
+    font-family: 'bitcount',sans-serif;
+    font-size: 2em;
+}
+
+#footer{
+    font-size: 0.7em;
+    background-color: var(--teal);
+    padding: 8px;
+}
+
+#footer a{
+    color:orangered;
+}
+
+#footer a:hover{
+    color: var(--yellow);
+}
