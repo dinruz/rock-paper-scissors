@@ -10,33 +10,33 @@
 <body>
     <div id="title">
         <h1> ROCK PAPER SCISSORS</h1> 
+        <p id="newGame">NEW GAME 🕹️</p>
     </div>
 
     <div class="wrap">
-    <div id="rules">
-    <h2>Rules</h2>
-
-    <h3>🕹️ It's You vs. The Machine!</h3>
-    <p>
-     Welcome!
-     This is a simple, 3-choice game.You will play against the PC until one of you wins the match. <br>
-     
-    <h3>🕹️ The Logic</h3>
-
-    <p>In each round, choose one of three hand shapes.
-     Each shape can beat only one other shape:</p>
+        <div id="rules">
+         <h2>RULES</h2>
+         <h3>🟡  It's You vs. The Machine!</h3>
+     <p> Welcome! <br><br>
+         This is a simple, 3-choice game. <br>
+         You will play against the PC until one of you wins the match. </p> 
+             
+     <h3>🟡  The Logic</h3>
+    <p>In each round, choose one of three hand shapes. <br>
+        Each shape can beat only one other shape (<strong>1 pt.</strong>):</p>
     <ul>
-        <li>Rock beats Scissors (<strong>1 pt.</strong>)</li>
-        <li>Scissors beats Paper (<strong>1 pt.</strong>)</li>
-        <li>Paper beats Rock (<strong>1 pt.</strong>)</li>
-        <li> Same shape - it's a tie (<strong>0 pts.</strong>)</li>
+        <li>Rock beats Scissors</li>
+        <li>Scissors beats Paper</li>
+        <li>Paper beats Rock</li>
     </ul>
+    <p>Matching moves result in a Tie (<strong>0 pts.</strong>).</p>
     
-    <h3>🕹️ THE WINNER</h3>
-    The first player to reach <strong>5 points</strong> wins the game. <br>
-    Good Luck!
-    </p>
-    </div>
+    <h3>🟡  The Winner</h3>
+    <p>
+        The first player to reach <strong>5 points</strong> wins the game. <br><br>
+        Good Luck! 🍀
+    </p> 
+ </div>
 
     <div id="main">
 
@@ -59,16 +59,17 @@
  
  <div id="results">
 <div id="result">
-        <h2>Results</h2>
-        <p id="message"></p>
+        <h2>RESULTS</h2>
+        <p>Round <span id="count"></span>: <span id="message"></span></p>
+        
          <table>
             <tr><th> HUMAN</th> <td><span id="humanScore">0</span>  points</td></tr>
             <tr><th> PC</th> <td><span id="pcScore">0</span>  points</td></tr>                     
          </table>
 </div>
 <div id="win">
- <h2>The winner:</h2>
-        <p id="winner"> ? </p>
+ <h2>THE WINNER:</h2>
+  <p id="winner"> ? </p>
 </div>
     </div> 
 

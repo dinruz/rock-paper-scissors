@@ -8,6 +8,7 @@ const human = document.querySelector('#humanScore');
 const pc = document.querySelector('#pcScore');
 const message =document.querySelector('#message');
 const winner = document.querySelector('#winner');
+const round = document.querySelector('#count');
 
 // Computer Choice 
 let computerAnswer;
@@ -22,6 +23,7 @@ function getComputerChoice (min,max){
 let tieScore=0;
 let humanScore=0;
 let computerScore=0;
+let count= 0; 
 
 let humanChoice; 
 
@@ -68,38 +70,48 @@ function handleClick(event){
         pcChoice.alt="paper"; 
     } 
         
-    
+  
     if (humanChoice == 0 && computerAnswer == 1){
         message.textContent = " Rock beats scissors. 🎉"; 
         humanScore++;
+        count++;
     }else if (humanChoice == 1 && computerAnswer == 0){
         message.textContent = " Stone beats scissors. ";
         computerScore++;
+        count++;
     }else if (humanChoice == 0 && computerAnswer == 0){
         message.textContent = "Rock vs. rock - it's a tie!";
         tieScore++;
+        count++;
     }else if (humanChoice == 1 && computerAnswer == 1){
         message.textContent = "Scissors vs. scissors - it's a tie!";
         tieScore++; 
+        count++;
     }else if (humanChoice == 2 && computerAnswer == 0){
         message.textContent = "Paper beats rock. 🎉";
         humanScore++;
+        count++;
     }else if (humanChoice == 2 && computerAnswer == 1){
         message.textContent = "Scissors beat paper.";
         computerScore++;
+        count++;
     }else if (humanChoice == 0 && computerAnswer == 2){
         message.textContent = "Paper beats stone.";
         computerScore++;
+        count++;
     }else if (humanChoice == 1 && computerAnswer == 2){
         message.textContent = "Scissors beat paper. 🎉";
         humanScore++;
+        count++;
     }else if (humanChoice == 2 && computerAnswer == 2){
        message.textContent = "Paper vs. paper - it's a tie!";
         tieScore++; 
+        count++;
     } 
     
     human.textContent = humanScore;
     pc.textContent = computerScore;
+    round.textContent = count;
            
     if (humanScore >= 5){
         winner.textContent = "YOU 🏆"; 
