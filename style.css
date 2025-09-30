@@ -29,16 +29,14 @@ ul {
 
 ul li::marker{
     color: var(--yellow);
-
 }
 
 img {
     transition: transform 0.3s; 
     height: 120px;
     width: auto;
-    padding:10px;
+    padding: 10px;
 }
-
 
 h1, h2{
     text-align: center;
@@ -47,11 +45,11 @@ h1, h2{
 
 h1{
     flex:1;
-    font-size: 2.2em;
+    font-size: 2.1em;
 }
 
 h2{
-    font-size:1.9em;
+    font-size:1.8em;
 }
 
 h3{
@@ -59,33 +57,66 @@ h3{
     font-size: 1em;
 }
 
+#results h2{
+    font-size:1.3em;
+}
+
 /* Sections */
 
 .wrap{
-    margin:20px;
+    margin: 10px 80px;
     display:flex;
 }
 
 #title{
-    padding: 10px;
+    padding: 10px 90px;
     background-color: var(--teal);
+    display:flex;
+}
+
+#newGame,
+#funfact{    
+    border: 3px dashed red;
+    background-color: teal;
+    cursor:pointer;
+    text-align: center;   
+}
+
+#newGame{
+    font-family: 'bitcount',sans-serif;
+    font-size: 1.3em;
+    padding: 10px;
+}
+
+#funfact{
+    display:flex;
+    justify-content: center; 
+    align-items: center; 
+    font-family: Consolas, 'Lucida Console', monospace;
+    color: var(--yellow);
+    padding: 15px;
+    width: auto;
+    height:100px;
+}
+
+#newGame, #rules, #results, #funfact,
+#yourChoice, #pcChoice,.highlight {
+    border-radius: 15px;
 }
 
 .highlight {
     animation: pop 0.3s ease-out forwards; 
-    border: 1.5px solid var(--teal);   
-    border-radius: 10%;
-    transform: scale(1.3); 
+    border: 1px solid var(--teal);   
+    transform: scale(1.2); 
 }
 
-#rules{
+#rules {
     flex:1;
     text-align: left;
     background-color: teal;
     border:3px dotted var(--teal);
-    border-radius: 5%;
-    font-size: 0.9em;
-    padding: 15px;
+    font-size: 0.8em;
+    padding:0px 20px;
     margin: 10px;
     max-width: 30%;
 }
@@ -93,9 +124,11 @@ h3{
 #choices{
     flex:1;
     display: flex;
-    padding:10px;
-    margin: 5px;
     min-width: 40%;
+}
+
+#pcChoice{
+    max-width:30%;
 }
 
 #yourChoice,
@@ -103,9 +136,8 @@ h3{
     flex:1;
     border:5px dotted var(--yellow);
     background-color: teal;
-    border-radius: 3%;
-    padding: 20px;
-    margin: 10px;
+    padding: 15px;
+    margin: 5px;
 }
 
 #yourChoice img,
@@ -113,10 +145,15 @@ h3{
     padding:15px;
 }
 
+#yourChoice img{
+    cursor:pointer;
+}
+
 #main{
     display:flex;
     flex:1;
     flex-direction: column;
+    margin:0 10px;
 }
 
 #result{
@@ -131,13 +168,11 @@ h3{
     color: var(--yellow);
     background-color: rgb(0, 0, 0);
     border:3px dotted var(--teal);
-    border-radius: 5%;
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Bradley Hand", "Comic Sans MS", cursive;
     color:antiquewhite;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
-    border:2px solid green;
 }
 
 table {
@@ -148,7 +183,6 @@ table {
 
 th, td {
     padding: 8px 15px;
-    
 }
 
 th {
@@ -169,19 +203,12 @@ tr:last-child th, tr:last-child td {
 #win{
     flex:1;
     text-align: center;
-}
-
-#winner-card{
-    border:0.5px dotted var(--yellow);
-    border-radius: 20%;
-    background-color: var(--teal);
-    padding: 60px;
-    margin: 140px 0;
+    padding:15px;
 }
 
 #winner{
     font-family: 'bitcount',sans-serif;
-    font-size: 2em;
+    font-size: 2.2em;
 }
 
 #footer{

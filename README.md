@@ -10,7 +10,7 @@ This repository contains the solution for "Rock-Paper-Scissors" project from The
   - [Phase 1 - Console Logic](#phase-1-console-logic)
   - [Phase 2 - UI Implementation](#phase-2-ui-implementation)
 - [Links](#links)
-- [Screenshot](#screenshot)
+- [Screenshots](#screenshots)
 - [Technical Details](#technical-details)
   - [Built with](#built-with)
   - [How to Play](#how-to-play)
@@ -33,9 +33,15 @@ It's developed in two phases, demonstrating a progression from fundamental logic
 
 ### Phase 2: UI Implementation
 
-* **DOM Manipulation:** Dynamically updating scores, messages, and PC choices.
+* **DOM Manipulation:** Dynamically updating scores, messages and PC choices; counting rounds.
 
-* **Event Handling:** Implementing **click Event Listeners** to handle player input, replacing the use of `prompt()`.
+* **Event Handling:** 
+
+  - Implemented **click Event Listeners** to handle player input (replacing the use of `prompt()` from first phase).
+
+  - Implemented 'New Game' functionality to fully **reset the game state**.
+  
+  - Implemented 'Random Funfact', trivia about the game, using `Math.random()` to select from a predefined array.
 
 ---
 
@@ -43,11 +49,10 @@ It's developed in two phases, demonstrating a progression from fundamental logic
 :---  | :--- | :--- | 
 1 | Core Game Logic | ✅ Completed 
 2 | UI Interactivity| ✅ Completed  
-3 | Responsivness   | ⚠️ Limited  *                 
+3 | Responsivness   | ⚠️ Limited*                 
 
 
-**This project primarily focuses on demonstrating core JS logic and DOM manipulation.* 
-*It's designed for standard desktop viewport resolutions and is **not fully responsive** for mobile devices (potential future enhancement).*
+**This project is designed for standard desktop viewport resolutions and is **not fully responsive** for mobile devices.*
 
 
 ## Links
@@ -55,15 +60,23 @@ It's developed in two phases, demonstrating a progression from fundamental logic
 * Solution URL: [GitHub Repo](https://github.com/dinruz/rock-paper-scissors)
 * Live Site URL: [Play 'Rock Paper Scissors'🕹️ ](https://dinruz.github.io/rock-paper-scissors/)
 
-## Screenshot
+## Screenshots
+
+
+
+<h3 align="center">Desktop View</h3>
 
 <table>
   <tr>
     <td align="center">
-      <h4>Desktop Version</h4>
-      <img src="./assets/screenshot.png" alt="Desktop preview of the Rock Paper Scissors" width="250">
+      <h4>Start of the Game</h4>
+      <img src="./assets/screenshots/screenshot-start.png" alt="Desktop preview-starting the game" width="350">
     </td>
-    </tr>
+    <td align="center">
+      <h4>End of the Game</h4>
+      <img src="./assets/screenshots/screenshot-end.png" alt="Desktop preview-ending the game" width="350">
+    </td>
+  </tr>
 </table>
 
 
@@ -74,26 +87,37 @@ It's developed in two phases, demonstrating a progression from fundamental logic
 
 * **HTML5** (Semantic structure)
 * **CSS3** (Custom fonts, Flexbox for layout)
-* **JavaScript** (Core logic, DOM interaction)
-* **Visual Studio Code**
+* Vanilla **JavaScript** (Core logic, DOM interaction)
+* Visual Studio Code
 
 ### How to Play
 
-1.  Open the **Live Demo** link above.
-2.  **Gameplay Mechanics** 🕹️
+1. Open the [Live site](https://dinruz.github.io/rock-paper-scissors/).
 
-    - To initiate a round, simply click on one of the three hand shapes (Rock, Paper or Scissors).
+2. **Gameplay Mechanics** 🕹️
 
-    - The PC's move will be instantly revealed. The *Results* section will update with the round's outcome and the current score tally.
+    - Initiate a round by clicking one of the three hand shapes (Rock, Paper or Scissors).
 
-    - The game continues automatically until one player secures 5 points. Once the score is reached, the final winner will be declared.
+    - The PC's move and the round's result will be instantly displayed in the *Results* section.
+
+    - The match continues until one player reaches a score of 5 points, at which point the final winner is declared.
+
+    - Click the *New Game* to reset the match and start a new one.
+
+    - Click *Reveal Funfact* for game trivia.
 
 3. **Win Conditions**
 
-    - Rock crushes Scissors (1 pt).
-    - Scissors cuts Paper (1 pt).
-    - Paper covers Rock (1 pt).
-    - Matching moves result in a **Tie** (0 pts).
+    * Each shape can beat only one other shape (1 pt.):
+
+        * Rock beats Scissors
+        * Scissors beats Paper
+        * Paper beats Rock
+    *  Matching moves result in a Tie (0 pts.).
+
+
+
+
 
 
 ## Development Timeline
