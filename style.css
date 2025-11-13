@@ -2,7 +2,7 @@
 
 @font-face {
     font-family:'bitcount';
-    src: url('./fonts/BitcountInk.ttf') format('truetype'); 
+    src: url('./assets/fonts/BitcountInk.ttf') format('truetype'); 
 }
 
 * {
@@ -66,12 +66,14 @@ h3{
 .wrap{
     margin: 10px 80px;
     display:flex;
+    flex-wrap: wrap;
 }
 
 #title{
     padding: 10px 90px;
     background-color: var(--teal);
     display:flex;
+    flex-wrap: wrap;
 }
 
 #newGame,
@@ -90,6 +92,7 @@ h3{
 
 #funfact{
     display:flex;
+    flex-wrap: wrap;
     justify-content: center; 
     align-items: center; 
     font-family: Consolas, 'Lucida Console', monospace;
@@ -124,6 +127,7 @@ h3{
 #choices{
     flex:1;
     display: flex;
+    flex-wrap: wrap;
     min-width: 40%;
 }
 
@@ -151,6 +155,7 @@ h3{
 
 #main{
     display:flex;
+    flex-wrap: wrap;
     flex:1;
     flex-direction: column;
     margin:0 10px;
@@ -163,6 +168,7 @@ h3{
 
 #results{
     display:flex;
+    flex-wrap: wrap;
     flex:1;
     text-align: left;
     color: var(--yellow);
